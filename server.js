@@ -38,7 +38,4 @@ app.get("/api/page", function (req, res) {
   res.json(pageData);
 });
 
-const port = 3000;
-app.listen(port, function () {
-  console.log("Server started on port", port);
-});
+app.listen(80);
