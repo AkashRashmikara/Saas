@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Patua+One&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+  <section class="headerindex">
+    <nav>
+      <a href="index.html">
+        <img src="images/logo.png" width="200" height="150" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times-circle" ng-click="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#sample">Samples</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" ng-click="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </section>
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3>{{ page.description }}</h3>
+      <a href="customcv.html" class="btn" target="_blank">Customize Your CV</a>
+    </div>
+
+    <div class="image">
+      <img id="movingImage" src="images/home.png" alt="resume" />
+    </div>
+  </section>
+
+  <section class="sample" id="sample">
+    <h1>Samples</h1>
+    <p>Select & Click You Wanted Template</p>
+    <div class="row">
+      <div class="sample-col">
+        <a href="temp1.html" target="_blank">
+          <img src="images/sample1.jpg" height="500" alt="resume"/>
+        </a>
+      </div>
+      <div class="sample-col">
+        <a href="temp2.html" target="_blank">
+          <img src="images/sample2.jpg" height="500" alt="resume"/>
+        </a>
+      </div>
+      <div class="sample-col">
+        <a href="new_page.html" target="_blank">
+          <img src="images/sample3.jpg" height="500" alt="resume"/>
+        </a>
+    </div>
+  </section>
+
+  <section class="cvita">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+    <div class="row">
+      <div class="cvita-col">
+        <h3>VISION</h3>
+        <p>{{ page.vision }}</p>
+      </div>
+      <div class="cvita-col">
+        <h3>MISSION</h3>
+        <p>{{ page.mission }}</p>
+      </div>
+      <div class="cvita-col">
+        <h3>EXPLORE</h3>
+        <p>{{ page.explore }}</p>
+      </div>
+    </div>
+  </section> 
+
+  <section class="footer">
+    <h4>About us</h4>
+    <p>{{ page.about }}</p>
+    <div class="icon">
+        <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/carrervita" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/+94770105173?text=Hello%2C%20I%20would%20like%20to%20chat" target="_blank"><i class="fa fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/akash-rashmikara-488a711bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by {{ page.auther }}</p>
+  </section>
+   
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+    const image = document.getElementById("movingImage");
+let size = 100;
+
+function sizeUp() {
+if (size < 600) {
+  size += 5; 
+  image.style.width = size + 'px';
+  image.style.height = size + 'px';
+  setTimeout(sizeUp, 30); 
+} else {
+  setTimeout(sizeDown, 50); 
+}
+}
+
+function sizeDown() {
+if (size > 300) {
+  size -= 5; 
+  image.style.width = size + 'px';
+  image.style.height = size + 'px';
+  setTimeout(sizeDown, 30); 
+} else {
+  setTimeout(sizeUp, 50); 
+}
+}
+
+sizeUp(); 
+
+  </script>
+</body>
+
+</html>

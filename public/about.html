@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>{{ page.abouttitle }}</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Patua+One&family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="myCtrl">
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"
+          ><img src="images/logo.png" width="200" height="150"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html#sample">Samples</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>About us</h1>
+    </section>
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.aboutdes }}</p>
+        </div>
+        <div class="about-col">
+          <img src="images/about.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <h4>About us</h4>
+      <p>{{ page.about }}</p>
+      <div class="icon">
+        <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/carrervita" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://wa.me/+94770105173?text=Hello%2C%20I%20would%20like%20to%20chat" target="_blank"><i class="fa fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/akash-rashmikara-488a711bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by {{ page.auther }}</p>
+    </section>
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
