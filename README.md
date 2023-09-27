@@ -16,10 +16,14 @@ Run below command to clone the code repository from Github:
 git clone https://github.com/AkashRashmikara/careervita.git
 ```
 
-Get inside the directory and Install Packages
+Get inside the directory 
 
 ```bash
 cd careervita
+```
+Install Packages
+
+```bash
 npm install
 ```
 
