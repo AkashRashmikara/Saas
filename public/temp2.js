@@ -1,4 +1,3 @@
-alert("preview")
 
 function addNewWeField(){
 let newNode=document.createElement('textarea');

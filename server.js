@@ -32,13 +32,19 @@ app.get("/api/page", function (req, res) {
       "We are a dedicated team passionate about helping individuals create professional CVs, providing innovative tools and expert guidance for career success.",
     aboutdes:
       "Our website epitomizes the epitome of excellence in the domain of curriculum vitae (CV) creation. Leveraging our vast repertoire of meticulously curated templates and bespoke design options, we offer a superlative user experience. Whether you gravitate towards a traditional format or desire an avant-garde aesthetic, our platform empowers you to fashion exquisitely crafted CVs that epitomize your erudition and dexterity. Imbue your professional profile with a veneer of distinction by harnessing our comprehensive suite of CV composition tools, thereby unlocking a pantheon of unparalleled career prospects.",
-    auther: "Akash Rashmikara",
+    auther: "Career Vita",
     abouttitle: "CareerVita-About",
   };
   res.json(pageData);
 });
-
-const port = 3000;
-app.listen(port, function () {
-  console.log("Server started on port", port);
+const port = process.env.PORT || 5500; 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
+module.exports = app;

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2feb6c4e-eb05-4899-861b-ba4cfd2ad0c7/resourceGroups/CareerVitaCV-grp/providers/Microsoft.Web/sites/CareerVitaCV",
+    "appService.deploySubpath": "."
+}
