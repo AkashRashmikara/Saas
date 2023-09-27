@@ -1,8 +1,9 @@
 # Career Vita CV generate web site
 
-## clone repository from GitHub
+## Step1: Install Git and clone repository from GitHub
 
 Just to verify if system has git installed or not, please run below command in terminal:
+
 ```bash
 git — version
 ```
@@ -13,16 +14,16 @@ Run below command to clone the code repository from Github:
 
 ```bash
 git clone https://github.com/AkashRashmikara/careervita.git
+```
 
+Get inside the directory and Install Packages
 
 ```bash
 cd careervita
-
 npm install
 ```
 
 Start the application
-
 To start the application, run the below command in the terminal:
 
 ```bash
