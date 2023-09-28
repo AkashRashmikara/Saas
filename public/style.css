@@ -70,7 +70,7 @@ nav .fa{
 }
 @media(max-width: 700px){
     .text-box h1{
-    font-size: 20px;
+    font-size: 40px;
     }
     .nav-links ul li{
         display: block;
@@ -97,6 +97,9 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .content.btn{
+      position: relative;
+    }
 }
 .cvita{
     width: 80%;
@@ -105,7 +108,7 @@ nav .fa{
     padding-top: 100px;
 }
 h1{
-    font-size: 36px;
+    font-size: 50px;
     font-weight: 600;
 }
 p{
