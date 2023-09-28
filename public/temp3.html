@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Generator</title>
+    <title>Career Vita CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/temp3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
-<body>
+<body ng-controller="myCtrl">
     <div class="container" id="cv-form">
-        <h1 class="text-center my-2">Your Resume Generator</h1>
-        <p class="text-center">By SoumyaDEV</p>
+        <h1 class="text-center my-2">CV Generator By Career Vita</h1>
+        <!-- <p class="text-center">By Career Vita</p> -->
 
         <div class="row">
             <div class="col-md-6">
@@ -111,6 +112,18 @@
                 </div>
             </div>
         </div>
+        <div id = footer class="footer">
+            <h4>About us</h4>
+            <p>We are a dedicated team passionate about helping individuals create professional CVs, providing innovative tools and expert guidance for career success.</p>
+            <div class="icon">
+                <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/carrervita" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=100094306094113" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://wa.me/+94770105173?text=Hello%2C%20I%20would%20like%20to%20chat" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/akash-rashmikara-488a711bb/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <p>Made with <i class="fa fa-heart-o"></i> by Career Vita</p>
+          </div>
 
         <div class="container text-center my-3">
             <button onclick="generateCV()" class="btn btn-primary btn-lg">
@@ -127,9 +140,9 @@
             <div class="col-md-4 text-center py-5 background">
                 <img src="https://img.freepik.com/premium-vector/social-media-user-profile-icon-video-call-screen_97886-10046.jpg?w=2000" alt="Profile Picture" class="img-fluid myimg" id="imgTemplate"/>
                 <div class="container">
-                    <p id="nameT1">XYZ</p>
-                    <p id="contactT">+914542454541, +9154564154</p>
-                    <p id="addressT">563563/4524152 Bangalore, INDIA</p>
+                    <p id="nameT1">SLTC</p>
+                    <p id="contactT">+94123456789</p>
+                    <p id="addressT">No:04/A, Gonahena, Kadawatha, Gampaha, sri Lanka</p>
                     <hr>
                     <p><a id="fbT" href="#1">https://www.facebook.com/soumyaranjan.therock./</a></p>
                     <p><a id="instaT" href="#1">https://www.instagram.com/anonymous__warior/</a></p>
@@ -147,7 +160,7 @@
                         <h3>Objective</h3>
                     </div>
                     <div class="card-body">
-                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquam maiores quaerat soluta blanditiis sit!</p>
+                        <p id="objectiveT">Your CV is not just a document, it's a reflection of your journey, skills, and aspirations.</p>
                     </div>
                 </div>
 
