@@ -18,7 +18,7 @@ app.get("/app.js", function (req, res) {
 
 app.get("/api/page", function (req, res) {
   const pageData = {
-    title: "CareerVita",
+    title: "Career Vita",
     contacttitle: "Careervita-contact",
     description:
       "Your CV is not just a document, it's a reflection of your journey, skills, and aspirations.",
